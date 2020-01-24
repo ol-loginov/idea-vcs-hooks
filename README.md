@@ -1,2 +1,11 @@
-# idea-vcs-hooks
-Plugin to assign custom vcs hooks
+# 
+
+Idea was inpired by https://github.com/yahely/PreCommitHookPlugin
+
+## Usage
+
+- Ka'mon!!
+
+## Known Problems
+
+- Wait, wait...

@@ -1,0 +1,35 @@
+<idea-plugin>
+  <id>com.github.ol-loginov.IdeaVCSHooks</id>
+  <vendor email="ol.loginov@gmail.com" url="https://github.com/ol-loginov">ol-loginov</vendor>
+
+  <name>VCS Hooks</name>
+  <description><![CDATA[
+      Plugin run various commands on/after some VCS commands, like commit, push, pull, etc.
+    ]]></description>
+
+  <version>0.1.0</version>
+
+  <change-notes><![CDATA[
+      Version 0.1.0 includes:
+<ul>
+    <li>Logo added (part of icon made by SmashIcons from www.flaticon.com)</li>
+</ul>
+    ]]>
+  </change-notes>
+
+  <idea-version since-build="162"/>
+
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.vcs</depends>
+
+  <resource-bundle>org.github.olloginov.ideavcshooks.VCSHooksBundle</resource-bundle>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <checkinHandlerFactory implementation="org.github.olloginov.ideavcshooks.CheckinHandlerFactoryImpl"  />
+    <checkoutListener implementation="org.github.olloginov.ideavcshooks.CheckoutListenerImpl"  />
+    <checkoutCompletedListener implementation="org.github.olloginov.ideavcshooks.CheckoutCompletedListenerImpl"  />
+
+    <projectConfigurable groupId="tools" displayName="VCS Hooks" instance="org.github.olloginov.ideavcshooks.Configurator" />
+  </extensions>
+
+</idea-plugin>
